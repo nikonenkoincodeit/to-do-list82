@@ -1,11 +1,11 @@
 export function createMarkup(data = []) {
   return data
-    .map(({ id, isDone, value }) => {
-      const classEl = isDone ? 'checked' : '';
+    .map(({ id, isDone, message }) => {
+      const classEl = isDone ? "checked" : "";
       return `<li class="item ${classEl}" data-id="${id}">
-        <p class="text">${value}</p>
+        <p class="text">${message}</p>
         <button type="button" class="button">x</button>
       </li>`;
     })
-    .join('');
+    .join("");
 }
